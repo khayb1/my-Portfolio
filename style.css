@@ -113,9 +113,9 @@ span{
  
 }
 .toggle:hover{
-  transform: scale(0.9);
-  background-color: var(--main-color);
-  color: var(--text-color);
+  transform: scale(1.1);
+  
+  color: var(--main-color);
 }
 
 
