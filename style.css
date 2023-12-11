@@ -102,10 +102,10 @@ span{
 }
 /*toggle*/
 .toggle{
-  top: 95vh;
+  top: 80vh;
   position: fixed;
   right: 0;
-  bottom: 0;
+  bottom: 80px;
   padding: 0.3rem;
   border-radius: 5px;
   backdrop-filter: blur(3px);
