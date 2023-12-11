@@ -106,7 +106,7 @@ span{
   position: fixed;
   right: 0;
   bottom: 80px;
-  padding: 0.3rem;
+  /* padding: 0.3rem; */
   border-radius: 5px;
   backdrop-filter: blur(3px);
   z-index: 100;
@@ -637,6 +637,8 @@ li{
   }
   .header{
     height: fit-content;
+    position: fixed;
+    top: 0;
   }
 
   
@@ -649,6 +651,7 @@ li{
  margin-top:10px ;
 
 }
+
  
 
 }
