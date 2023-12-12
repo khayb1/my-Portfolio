@@ -16,6 +16,13 @@
   --main-color: #05b4ff;
   transition: 1.5s ease-in-out;
 }
+.white-theme{
+  --bg-color: #2a2a2a;
+  --second-bg-color: #202020;
+  --text-color: #fff;
+  --second-color: #ccc;
+  --main-color: #05b4ff;
+}
 .dark-theme {
   --bg-color: #f3f3f3f3;
   --second-bg-color: #e4e4e4;
@@ -57,7 +64,7 @@ body {
   padding: 0 10%; 
   background-color: rgba(0,0,0,0.6);
   backdrop-filter: blur(4px);
-  z-index: 100;
+  z-index: 1;
     
 }
 
@@ -99,24 +106,82 @@ span{
  }
  .nav-item a:hover {
   color: var(--main-color);
+ }
+
+ /* toggle */
+ .toggle{
+  /* position: absolute; */
+  top: 5vh;
+  right: 95vw;
+  z-index: 2;
+ }
+ .input {
+  visibility: hidden;
 }
-/*toggle*/
-.toggle{
+
+.label {
+  position: absolute;
+  width: 40px;
+  height: 20px;
+  background-color: lightgray;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.circle {
+  width: 14px;
+  background-color: var(--bg-color);
+  height: 14px;
+  border-radius: 50%;
+  top: 3px;
+  position: absolute;
+  left: 3px;
+  animation: toggleOff 0.4s linear forwards;
+}
+
+.input:checked + .label {
+  background-color: white;
+}
+
+.input:checked + .label .circle {
+  animation: toggleOn 0.4s linear forwards;
+  background-color: grey;
+}
+
+@keyframes toggleOn {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20px);
+  }
+}
+
+@keyframes toggleOff {
+  0% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+/* toggle */
+ /* .toggle{
   top: 80vh;
   position: fixed;
   right: 0;
   bottom: 80px;
-  /* padding: 0.3rem; */
-  border-radius: 5px;
-  backdrop-filter: blur(3px);
-  z-index: 100;
+   padding: 0.3rem; 
+  border-radius: 5px; 
+  backdrop-filter: blur(3px); 
+  z-index: 100; 
  
-}
+} 
 .toggle:hover{
-  transform: scale(1.1);
+  transform: scale(1.1); 
   
-  color: var(--main-color);
-}
+  color: var(--main-color); 
+}*/
 
 
 /* home-section */
@@ -223,10 +288,7 @@ span{
   object-fit: cover;
   
 }
-.about-text{
-  padding-top:  7rem;
- 
-}
+
 .about-text h2{
   font-size: 3rem;
 }
@@ -236,7 +298,7 @@ span{
   font-size: medium;
   font-family: 'Times New Roman', Times, serif;
   font-size: large;
-  margin-bottom: 4rem;
+  margin-bottom: 1.5rem;
   text-wrap:wrap ;
   line-height: 2;
 }
@@ -631,15 +693,21 @@ li{
 
 }
 @media (max-width:700px){
-  #contact{
-    display: flex;
-    flex-direction: column;
+  .home{
+    margin-top: 6rem;
+  
   }
   .header{
     height: fit-content;
     position: fixed;
     top: 0;
   }
+    
+  #contact{
+    display: flex;
+    flex-direction: column;
+  }
+  
 
   
  li{

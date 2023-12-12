@@ -1,10 +1,26 @@
 const toggleBtn = document.querySelector('.toggle');
-const articlesContainer = document.querySelector('.articles');
+const inputEl = document.querySelector(".input");
 
-toggleBtn.addEventListener('click', () => {
-  document.documentElement.classList.toggle('dark-theme');
-});
 
+
+ toggleBtn.addEventListener('click', () => {
+   updateBody();
+ 
+
+ });
+
+        
+    function updateBody() {
+    if (inputEl.checked) {
+        document.documentElement.classList.toggle('dark-theme');
+    } else {
+        document.documentElement.classList.toggle('white-theme');
+    }
+  }
+ 
+
+
+// scroll animation
 window.addEventListener('scroll', reveal);
 
 function reveal(){
