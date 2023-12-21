@@ -1,7 +1,7 @@
 const toggleBtn = document.querySelector('.toggle');
 const inputEl = document.querySelector(".input");
 
-
+// dark mode animation 
 
  toggleBtn.addEventListener('click', () => {
    updateBody();
@@ -21,22 +21,15 @@ const inputEl = document.querySelector(".input");
 
 
 // scroll animation
-window.addEventListener('scroll', reveal);
-
-function reveal(){
-    var reveals = document.querySelectorAll('.reveal');
-    for (var i =0; i,reveals.length; i++){
-        var windowheight = window.innerHeight;
-        var revealtop = reveals[i].getBoundingClientRect().top;
-        var revealpoint = 100;
-        
-        if (revealtop <windowheight - revealpoint){
-            reveals[i].classList.add('active');
-
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
         }
-        else{
-            reveals[i].classList.remove('active');
-        }
-    }
-
-}
+    });
+});
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => observer.observe(el));

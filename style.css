@@ -37,16 +37,6 @@ body {
   color: var(--text-color);
   transition: 1.2s ease-in;
 }
-.reveal{
-  position: relative;
-  transform: translateY(100px);
-  opacity: 0;
-  transition: 1.4s ease;
-}
-.reveal.active{
-  transform: translateY(0px);
-  opacity: 1;
-}
 
 
 /* navbar-section */
@@ -675,6 +665,20 @@ footer {
   background: var(--main-color);
 }
 
+/* animation section  */
+
+.hidden{
+  opacity: 0; 
+  filter:blur(5px);
+   transform:translateX(-100%);
+  transition: all 1s;
+
+}
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
 /*media query for small screen */
 @media (max-width: 1200px){
 .header{
