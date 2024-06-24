@@ -100,7 +100,6 @@ span{
 
  /* toggle */
  .toggle{
-  /* position: absolute; */
   top: 5vh;
   right: 95vw;
   z-index: 2;
@@ -155,23 +154,7 @@ span{
     transform: translateX(0);
   }
 }
-/* toggle */
- /* .toggle{
-  top: 80vh;
-  position: fixed;
-  right: 0;
-  bottom: 80px;
-   padding: 0.3rem; 
-  border-radius: 5px; 
-  backdrop-filter: blur(3px); 
-  z-index: 100; 
- 
-} 
-.toggle:hover{
-  transform: scale(1.1); 
-  
-  color: var(--main-color); 
-}*/
+
 
 
 /* home-section */
@@ -184,7 +167,7 @@ span{
   justify-content: flex-start;
   padding-left: 10%;
   margin: 200px 0 0 0;
- 
+
 
 }
 .home-text{
@@ -264,8 +247,6 @@ span{
   width: 80%;
   display: inline-block;
   margin: 10% 10%;
-  
-  
 }
 
 
@@ -390,7 +371,7 @@ flex-wrap: wrap;
   margin:10px ;
   border-radius: 10px;  
   transform: 10ms ease;
-  height: 500px;
+  height:600px;
 
 
 }
@@ -436,10 +417,6 @@ flex-wrap: wrap;
   text-align: center;
   line-height: 2;
   padding: 10px;
-  
-
-  
-
 
 }
 .skill-info h4{
@@ -487,16 +464,20 @@ flex-wrap: wrap;
   animation: html 3s;
 }
 .css{
-  width: 70%;
+  width: 85%;
   animation: css 4s;
 }
 .bootstrap{
-  width: 55%;
+  width: 90%;
   animation: bootstrap 5s;
 }
 .javascript{
-  width: 50%;
+  width: 70%;
   animation: javascript 6s;
+}
+.react{
+  width: 60%;
+  animation: react 7s;
 }
 
 @keyframes html{
@@ -510,7 +491,7 @@ flex-wrap: wrap;
 
 @keyframes css{
   0%{
-    width: 0%;
+    width: 85%;
     }
     100%{
       width: 70%;
@@ -521,7 +502,7 @@ flex-wrap: wrap;
     width: 0%;
   }
   100%{
-    width: 55%;
+    width: 90%;
   }
   
 }
@@ -530,8 +511,16 @@ flex-wrap: wrap;
     width: 0%;
   }
   100%{
-    width: 50%;
+    width: 70%;
   }
+}
+  @keyframes react{
+    0%{
+      width: 0%;
+    }
+    100%{
+      width: 60%;
+    }
 }
 
 /* contact section */
@@ -553,7 +542,7 @@ flex-wrap: wrap;
 }
 
 .contact-text h2 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 1;
 }
 
@@ -670,14 +659,14 @@ footer {
 .hidden{
   opacity: 0; 
   filter:blur(5px);
-   transform:translateX(-100%);
-  transition: all 1s;
+   transform:scale(0.7);
+  transition: all 0.5s;
 
 }
 .show{
   opacity: 1;
   filter: blur(0);
-  transform: translateX(0);
+  transform: scale(1);
 }
 /*media query for small screen */
 @media (max-width: 1200px){
