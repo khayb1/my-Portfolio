@@ -779,9 +779,9 @@ li{
 
 
 .skill-set-1 .wrapper img{
-  height: 100px;
-  width: 100px;
-  margin:0 20px;
+  height: 60px;
+  width: 60px;
+  margin:0 10px;
  
 }
 .skill-set-1::before{
