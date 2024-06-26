@@ -33,3 +33,8 @@ const observer = new IntersectionObserver((entries) => {
 });
 const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
+
+// client section 
+var copy = document.querySelector(".wrapper").cloneNode(true);
+document.querySelector(".skill-set-1").appendChild(copy);
+console.log(copy);
