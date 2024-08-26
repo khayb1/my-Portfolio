@@ -215,7 +215,7 @@
   <section class="contact " id="contact">
     <div class="contact-text hidden">
       <h2>Contact <span>Me!</span></h2>
-      <img id="collaborate" src="collaborate.gif" alt="collaborate" width="350px" >
+      <img id="collaborate" src="/collaborate.gif" alt="collaborate" width="350px" >
       <h4>If you have any project in your mind.</h4>
       <p>I'm a Front-End Developer- creating bold & brave interface design for compaines all across the world.</p>
       <div class="list">
@@ -232,12 +232,14 @@
       </div>
 
     </div>
+    
     <div class="contact-form hidden">
-      <form action="" class="input-items">
-        <input type="name" placeholder="Your Name " required>
-        <input type="email" placeholder="Your Email " required>
-        <input type="number" placeholder="your Mobile Number" required>
-        <textarea name="" id="" cols="35" rows="10" placeholder="How Can I Help You " required></textarea>
+      <form  action="https://formspree.io/f/meojajzn"
+      method="POST" class="input-items">
+        <input type="name" placeholder="Your Name " required name="name"> 
+        <input type="email" placeholder="Your Email " required name="email">
+        <input type="number" placeholder="your Mobile Number" required name="number">
+        <textarea name="Message" id="" cols="35" rows="10" placeholder="How Can I Help You " required ></textarea>
         <input class="button" type="submit" value="Send Message" class="submit" required>
 
       </form>
